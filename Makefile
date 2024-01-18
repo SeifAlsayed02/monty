@@ -4,7 +4,7 @@ build:
 all: build
 
 memory:
-	valgrind ./monty bytecodes/000.m
+	valgrind ./monty bytecodes/006.m
 
 run:
-	./monty bytecodes/000.m
+	./monty bytecodes/006.m
