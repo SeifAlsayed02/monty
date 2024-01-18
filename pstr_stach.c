@@ -24,7 +24,7 @@ void pstr_stack(stack_t **stack, unsigned int line_number)
         {
 		if (temp_stack->n <= 0 || temp_stack->n > 127)
 			break;
-                printf("%c\n", temp_stack->n);
+                printf("%c", temp_stack->n);
                 temp_stack = temp_stack->next;
         }
 	 printf("\n");
