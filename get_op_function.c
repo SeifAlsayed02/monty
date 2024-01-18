@@ -25,6 +25,8 @@ void get_op_function(char *opcode, char *value, int line_num)
 		{"div", div_stack},
 		{"mul", mul_stack},
 		{"mod", mod_stack},
+		{"pchar", pchar_stack},
+		{"pstr", pstr_stack},
 		{NULL, NULL}
 	};
 
