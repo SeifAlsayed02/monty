@@ -59,5 +59,6 @@ void exec_func(op_func op_function, char *opcode, char *value, int line_num);
 void push_stack(stack_t **stack, unsigned int line_number);
 void print_stack(stack_t **stack, unsigned int line_number);
 void print_top_stack(stack_t **stack, unsigned int line_number);
+void pop_stack(stack_t **stack, unsigned int line_number);
 
 #endif
