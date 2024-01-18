@@ -21,6 +21,10 @@ void get_op_function(char *opcode, char *value, int line_num)
 		{"swap", swap_stack},
 		{"add", add_stack},
 		{"nop", nop},
+		{"sub", sub_stack},
+		{"div", div_stack},
+		{"mul", mul_stack},
+		{"mod", mod_stack},
 		{NULL, NULL}
 	};
 
