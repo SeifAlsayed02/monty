@@ -1,5 +1,7 @@
 #include "monty.h"
 
+stack_t *head = NULL;
+
 /**
 * main - Entry point
 * @argc: number of arguments
@@ -8,7 +10,6 @@
 * Return: Always 0 (success)
 */
 
-stack_t *head = NULL;
 
 int main(int argc, char *argv[])
 {
