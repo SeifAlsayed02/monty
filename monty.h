@@ -60,5 +60,7 @@ void push_stack(stack_t **stack, unsigned int line_number);
 void print_stack(stack_t **stack, unsigned int line_number);
 void print_top_stack(stack_t **stack, unsigned int line_number);
 void pop_stack(stack_t **stack, unsigned int line_number);
-
+void swap_stack(stack_t **stack, unsigned int line_number);
+void add_stack(stack_t **stack, unsigned int line_number);
+void nop(stack_t **stack, unsigned int line_number);
 #endif
