@@ -1,5 +1,6 @@
 #ifndef _MONTY_H_
 #define _MONTY_H_
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -7,6 +8,15 @@
 #include <unistd.h>
 #include <ctype.h>
 #include <fcntl.h>
+
+#define bool short
+#define true 1
+#define false 0
+#define fail -1
+
+#define DELIM " \n"
+
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -35,5 +45,18 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+extern stack_t *head;
+typedef void (*op_func)(stack_t **, unsigned int);
+
+
+stack_t *init_node(int val);
+void free_all_nodes(void);
+
+void get_opcode_val(char *buff, int line_num);
+void get_op_function(char *opcode, char *value, int line_num);
+void exec_func(op_func op_function, char *opcode, char *value, int line_num);
+void push_stack(stack_t **stack, unsigned int line_number);
+void print_stack(stack_t **stack, unsigned int line_number);
 
 #endif
