@@ -15,7 +15,7 @@ void div_stack(stack_t **stack, unsigned int line_number)
 
 		int sum;
 
-		if (*stack == NULL || stack == NULL || (*stack)->next == NULL)
+		if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		{
 		fprintf(stderr, "L%d: can't div, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
