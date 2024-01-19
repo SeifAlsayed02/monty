@@ -45,5 +45,8 @@ void get_op_function(char *opcode, char *value, int line_num)
 	}
 
 	if (!is_valid_instruction)
+	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_num, opcode);
+		exit(EXIT_FAILURE);
+	}
 }

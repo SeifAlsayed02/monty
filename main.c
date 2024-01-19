@@ -29,8 +29,10 @@ int main(int argc, char *argv[])
 	input_file = fopen(argv[1], "r");
 
 	if (!argv[1] || !input_file)
+	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
-
+		exit(EXIT_FAILURE);
+	}
 
 	/*read line*/
 	while (getline(&buff, &n, input_file) != -1)

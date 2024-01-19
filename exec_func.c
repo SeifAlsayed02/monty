@@ -21,12 +21,18 @@ void exec_func(op_func op_function, char *opcode, char *value, int line_num)
 			value = value + 1;
 		}
 		if (!value)
+		{
 			fprintf(stderr, "L%d: usage: push integer\n", line_num);
+			exit(EXIT_FAILURE);
+		}
 
 		for (i = 0; value[i] != '\0'; i++)
 		{
 			if (isdigit(value[i]) == 0)
+			{
 				fprintf(stderr, "L%d: usage: push integer\n", line_num);
+				exit(EXIT_FAILURE);
+			}
 		}
 		node = init_node(neg_val * atoi(value));
 

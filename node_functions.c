@@ -13,8 +13,10 @@ stack_t *init_node(int val)
 
 	node = malloc(sizeof(stack_t));
 	if (!node)
+	{
 		fprintf(stderr, "Error: malloc failed\n");
-
+		exit(EXIT_FAILURE);
+	}
 	node->n = val;
 	node->prev = NULL;
 	node->next = NULL;

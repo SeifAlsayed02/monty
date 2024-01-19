@@ -12,7 +12,10 @@ void get_opcode_val(char *buff, int line_num)
 	char *opcode, *num;
 
 	if (buff == NULL)
+	{
 		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
 
 	opcode = strtok(buff, DELIM);
 	if (opcode == NULL)
