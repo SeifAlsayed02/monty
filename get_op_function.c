@@ -27,6 +27,8 @@ void get_op_function(char *opcode, char *value, int line_num)
 		{"mod", mod_stack},
 		{"pchar", pchar_stack},
 		{"pstr", pstr_stack},
+		{"rotl", rotl_stack},
+		{"rotr", rotr_stack},
 		{NULL, NULL}
 	};
 
